@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "08d8acbebf0bfe1467f8e6bcdf3acdb2",
+    "content-hash": "823b62065436ba707a269ccc97f27852",
     "packages": [
         {
             "name": "barryvdh/laravel-dompdf",
@@ -1057,6 +1057,7 @@
                     "email": "jakub.onderka@gmail.com"
                 }
             ],
+            "abandoned": "php-parallel-lint/php-console-color",
             "time": "2018-09-29T17:23:10+00:00"
         },
         {
@@ -1103,6 +1104,7 @@
                 }
             ],
             "description": "Highlight PHP code in terminal",
+            "abandoned": "php-parallel-lint/php-console-highlighter",
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
@@ -1834,6 +1836,7 @@
                 "cron",
                 "schedule"
             ],
+            "abandoned": "dragonmantank/cron-expression",
             "time": "2017-01-23T04:29:33+00:00"
         },
         {
@@ -2703,12 +2706,12 @@
             "version": "v1.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/nrk/predis.git",
+                "url": "https://github.com/predis/predis.git",
                 "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nrk/predis/zipball/f0210e38881631afeafb56ab43405a92cafd9fd1",
+                "url": "https://api.github.com/repos/predis/predis/zipball/f0210e38881631afeafb56ab43405a92cafd9fd1",
                 "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1",
                 "shasum": ""
             },
@@ -4993,16 +4996,16 @@
         },
         {
             "name": "wedesignit/laravel-translations-import",
-            "version": "v0.1.8",
+            "version": "dev-feature/convert-to-barry",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WeDesignIt/laravel-translations-import.git",
-                "reference": "582281697df58edcea95eb8727c18cfd830ff726"
+                "reference": "6f04c54454ad49fb94d8cbbfc27189dfa133bc1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WeDesignIt/laravel-translations-import/zipball/582281697df58edcea95eb8727c18cfd830ff726",
-                "reference": "582281697df58edcea95eb8727c18cfd830ff726",
+                "url": "https://api.github.com/repos/WeDesignIt/laravel-translations-import/zipball/6f04c54454ad49fb94d8cbbfc27189dfa133bc1e",
+                "reference": "6f04c54454ad49fb94d8cbbfc27189dfa133bc1e",
                 "shasum": ""
             },
             "require": {
@@ -5040,6 +5043,10 @@
                 {
                     "name": "Patrick van Kouteren",
                     "email": "info@wedesignit.nl"
+                },
+                {
+                    "name": "Yannick Schrijvers",
+                    "email": "yincimaster@gmail.com"
                 }
             ],
             "description": "Import translations from your Laravel translation files to your database.",
@@ -5048,7 +5055,7 @@
                 "laravel",
                 "translations"
             ],
-            "time": "2019-11-18T15:48:41+00:00"
+            "time": "2020-10-28T12:42:51+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",
@@ -5115,6 +5122,7 @@
                 "psr",
                 "psr-7"
             ],
+            "abandoned": "laminas/laminas-diactoros",
             "time": "2019-10-08T20:08:44+00:00"
         }
     ],
@@ -5710,8 +5718,8 @@
             "authors": [
                 {
                     "name": "Filipe Dobreira",
-                    "homepage": "https://github.com/filp",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "homepage": "https://github.com/filp"
                 }
             ],
             "description": "php error handling for cool kids",
@@ -6623,6 +6631,7 @@
             "keywords": [
                 "tokenizer"
             ],
+            "abandoned": true,
             "time": "2017-11-27T05:48:46+00:00"
         },
         {
@@ -7504,8 +7513,8 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "arne@blankerts.de"
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
@@ -7565,7 +7574,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "ecodenl/pico-wrapper": 20
+        "ecodenl/pico-wrapper": 20,
+        "wedesignit/laravel-translations-import": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
