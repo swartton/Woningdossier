@@ -5000,12 +5000,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/WeDesignIt/laravel-translations-import.git",
-                "reference": "6f04c54454ad49fb94d8cbbfc27189dfa133bc1e"
+                "reference": "cb71087b55ed284209322dc1eb9b457eafb568b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WeDesignIt/laravel-translations-import/zipball/6f04c54454ad49fb94d8cbbfc27189dfa133bc1e",
-                "reference": "6f04c54454ad49fb94d8cbbfc27189dfa133bc1e",
+                "url": "https://api.github.com/repos/WeDesignIt/laravel-translations-import/zipball/cb71087b55ed284209322dc1eb9b457eafb568b1",
+                "reference": "cb71087b55ed284209322dc1eb9b457eafb568b1",
                 "shasum": ""
             },
             "require": {
@@ -5055,7 +5055,7 @@
                 "laravel",
                 "translations"
             ],
-            "time": "2020-10-28T12:42:51+00:00"
+            "time": "2020-10-29T08:26:37+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",
