@@ -3,6 +3,7 @@
 namespace Tests\Unit\app\Calculations;
 
 use App\Calculations\WallInsulation;
+use App\Models\InputSource;
 use Tests\TestCase;
 use Tests\Unit\data\ExcelExample;
 
@@ -20,44 +21,53 @@ class WallInsulationTest extends TestCase
 
         $building = ExcelExample::building();
 
+        $inputSource = ExcelExample::inputSource();
+
         $habits = ExcelExample::userEnergyHabits();
 
-        $calculate = [
-            'cavity_wall' => 0,
+        $calculateData = [
             'element' => [3 => 10], // 3 = wall insulation element, 10 = geen isolatie
-            'insulation_wall_surface' => 33,
-            'wall_joints' => 1, // nee
-            'contaminated_wall_joints' => 1, // nee
-            'facade_plastered_painted' => 2, // nee
+            'building_features' => [
+                'cavity_wall' => 0,
+                'wall_surface' => 12,
+                'insulation_wall_surface' => 33,
+                'wall_joints' => 1, // nee
+                'contaminated_wall_joints' => 1, // nee
+                'facade_plastered_painted' => 2, // nee
+
+                // these should be sent if the facade_plastered_painted = 1 or "ja"
+//                'facade_plastered_surface_id' => 2,
+//                'facade_damaged_paintwork_id' => 1
+            ],
         ];
 
-        $results = WallInsulation::calculate($building, $habits, $calculate);
+        $results = WallInsulation::calculate($building, $inputSource, $habits, $calculateData);
 
         dd($results);
 
         /*
-          [
+            array:10 [
               "savings_gas" => 0
               "paint_wall" => array:2 [
                 "costs" => 0
                 "year" => 0
               ]
-              "insulation_advice" => "Spouwmuurisolatie"
+              "insulation_advice" => "Er is nader onderzoek nodig hoe de gevel het beste geïsoleerd kan worden"
               "savings_co2" => 0.0
               "savings_money" => 0.0
-              "cost_indication" => 0
-              "interest_comparable" => "0,0"
+              "cost_indication" => 650.0
+              "interest_comparable" => "0.0"
               "repair_joint" => array:2 [
                 "costs" => 0
-                "year" => 2019
+                "year" => 2020
               ]
               "clean_brickwork" => array:2 [
                 "costs" => 0
-                "year" => 2019
+                "year" => 2020
               ]
               "impregnate_wall" => array:2 [
                 "costs" => 0
-                "year" => 2019
+                "year" => 2020
               ]
             ]
          */

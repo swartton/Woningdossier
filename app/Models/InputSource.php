@@ -35,6 +35,7 @@ class InputSource extends Model
     const COOPERATION_SHORT = 'cooperation';
     const EXAMPLE_BUILDING = 'example-building';
 
+    protected $fillable = ['name', 'short', 'order'];
     /**
      * Check if the input source is a resident.
      */

@@ -7,6 +7,7 @@ use App\Models\BuildingHeating;
 use App\Models\BuildingService;
 use App\Models\BuildingType;
 use App\Models\ComfortLevelTapWater;
+use App\Models\InputSource;
 use App\Models\Service;
 use App\Models\ServiceValue;
 use App\Models\User;
@@ -14,6 +15,14 @@ use App\Models\UserEnergyHabit;
 
 class ExcelExample
 {
+
+    public static function inputSource()
+    {
+        return InputSource::firstOrCreate(['short' => 'resident'], [
+            'name' => 'Bewoner',
+            'order' => 1
+        ]);
+    }
     // These fixtures come from the original Excel example that was the basis
     // of this tool and it's calculations. We use this to check if the outcomes
     // of the tool match the outcomes of the Excel file.
@@ -27,7 +36,7 @@ class ExcelExample
 
         // 'street', 'number', 'city', 'postal_code', 'bag_addressid', 'building_coach_status_id', 'extension', 'is_active'
         $b = new \App\Models\Building([
-            'street'      => 'Straat', 'number' => 1, 'city' => 'Nowhere',
+            'street' => 'Straat', 'number' => 1, 'city' => 'Nowhere',
             'postal_code' => '2013 BC', 'bag_addressid' => '01234',
         ]);
         $b->primary = 1;
