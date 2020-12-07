@@ -16,7 +16,7 @@ class WallInsulationTest extends TestCase
 
     public function testCalculate()
     {
-        $this->markTestIncomplete('Work in progress with the input source related traits');
+        $this->markTestIncomplete('Calculate data gets returned, now we need assertions.');
         $user = ExcelExample::user();
 
         $building = ExcelExample::building();
@@ -30,7 +30,7 @@ class WallInsulationTest extends TestCase
             'building_features' => [
                 'cavity_wall' => 0,
                 'wall_surface' => 12,
-                'insulation_wall_surface' => 33,
+                'insulation_wall_surface' => 97,
                 'wall_joints' => 1, // nee
                 'contaminated_wall_joints' => 1, // nee
                 'facade_plastered_painted' => 2, // nee

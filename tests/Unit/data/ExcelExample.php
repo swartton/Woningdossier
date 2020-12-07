@@ -16,7 +16,7 @@ use App\Models\UserEnergyHabit;
 class ExcelExample
 {
 
-    public static function inputSource()
+    public static function inputSource(): InputSource
     {
         return InputSource::firstOrCreate(['short' => 'resident'], [
             'name' => 'Bewoner',
